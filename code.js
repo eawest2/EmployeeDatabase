@@ -23,6 +23,8 @@ var config = {
     //push user data to Firebase
     function dataPush () {
 
+        event.preventDefault();
+
         var nameInput = $("#name-input").val().trim()
         var roleInput = $("#role-input").val().trim()
         var dateInput = $("#start-input").val().trim()
@@ -57,6 +59,8 @@ var config = {
         var assemblerFinish = '</tr>'
         var assemblerItem = '<td>'
         var assemblerItemFinish = '</td>'
+
+        event.preventDefault();
 
         $("#employees").append(assemblerStart + assemblerItem + childsnapshot.name + assemblerItemFinish + assemblerItem + childsnapshot.role + assemblerItemFinish + assemblerItem);
 
