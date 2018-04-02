@@ -52,13 +52,13 @@ var config = {
     });
     
     //on child added
-    dataRef.ref().on("child_added", function(childsnapshot){
+    database.ref().on("child_added", function(childsnapshot){
         var assemblerStart = '<tr>'
         var assemblerFinish = '</tr>'
         var assemblerItem = '<td>'
         var assemblerItemFinish = '</td>'
 
-        $("#employees").append(assemblerStart + assemblerItem + childsnapshot.name + assemblerItemFinish);
+        $("#employees").append(assemblerStart + assemblerItem + childsnapshot.name + assemblerItemFinish + assemblerItem + childsnapshot.role + assemblerItemFinish + assemblerItem);
 
 
 
