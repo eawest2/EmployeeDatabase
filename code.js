@@ -29,11 +29,12 @@ var config = {
         var rateInput = $("#rate-input").val().trim()
 
     //firebase object push
-        database.ref().push({
+        database.users.ref().push({
         name: nameInput,
         role: roleInput,
         date: dateInput,
         rate: rateInput,
+        dateAdded: firebase.database.ServerValue.TIMESTAMP,
         
             });
 
@@ -45,10 +46,16 @@ var config = {
     };
 
 //Event listeners
+    //submit data to firebase
+    $("#submit").on("click", function (){
+        datapush();
+    });
+    
+    //on child added
+    dataRef.ref().on("child_added", function(childsnapshot){
 
-$("#submit").on("click", function (){
-    datapush();
-});
+    
+    });
 
 
 //initialize code
