@@ -37,7 +37,18 @@ var config = {
         
             });
 
+            $("#name-input").value = "";
+            $("#role-input").value = "";
+            $("#start-input").value = "";
+            $("#rate-input").value = "";
+
     };
+
+//Event listeners
+
+$("#submit").on("click", function (){
+    datapush();
+});
 
 
 //initialize code
