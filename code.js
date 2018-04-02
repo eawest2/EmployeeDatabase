@@ -58,7 +58,7 @@ var config = {
         var assemblerItem = '<td>'
         var assemblerItemFinish = '</td>'
 
-        $("#employees").append(assemblerStart + assemblerItem + childsnapshot.name);
+        $("#employees").append(assemblerStart + assemblerItem + childsnapshot.name + assemblerItemFinish);
 
 
 
