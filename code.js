@@ -51,7 +51,7 @@ var config = {
     //submit data to firebase
     $("#submit").on("click", function (event){
         event.preventDefault();
-        datapush();
+        dataPush();
     });
     
     //on child added
