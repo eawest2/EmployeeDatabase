@@ -31,7 +31,7 @@ var config = {
         var rateInput = $("#rate-input").val().trim()
 
     //firebase object push
-        database.users.ref().push({
+        database.ref().push({
         name: nameInput,
         role: roleInput,
         date: dateInput,
