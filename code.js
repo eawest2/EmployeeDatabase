@@ -49,7 +49,8 @@ var config = {
 
 //Event listeners
     //submit data to firebase
-    $("#submit").on("click", function (){
+    $("#submit").on("click", function (event){
+        event.preventDefault();
         datapush();
     });
     
@@ -59,8 +60,6 @@ var config = {
         var assemblerFinish = '</tr>'
         var assemblerItem = '<td>'
         var assemblerItemFinish = '</td>'
-
-        event.preventDefault();
 
         $("#employees").append(assemblerStart + assemblerItem + childsnapshot.name + assemblerItemFinish + assemblerItem + childsnapshot.role + assemblerItemFinish + assemblerItem);
 
