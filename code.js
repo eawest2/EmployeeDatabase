@@ -60,8 +60,8 @@ var config = {
         var assemblerFinish = '</tr>'
         var assemblerItem = '<td>'
         var assemblerItemFinish = '</td>'
+        var math = moment(dateInput).diff(moment(), "months");
         var assembly = assemblerStart + assemblerItem + childsnapshot.val().name + assemblerItemFinish + assemblerItem + childsnapshot.val().role + assemblerItemFinish + assemblerItem + childsnapshot.val().date + assemblerFinish;
-
         $("#employees").append(assembly);
 
 
