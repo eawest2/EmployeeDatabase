@@ -60,9 +60,9 @@ var config = {
         var assemblerFinish = '</tr>'
         var assemblerItem = '<td>'
         var assemblerItemFinish = '</td>'
+        var assembly = assemblerStart + assemblerItem + childsnapshot.val().name + assemblerItemFinish + assemblerItem + childsnapshot.val().role + assemblerItemFinish + assemblerItem + childsnapshot.val().date + assemblerFinish;
 
-        $("#employees").append(assemblerStart + assemblerItem + childsnapshot.name + assemblerItemFinish + assemblerItem + childsnapshot.role + assemblerItemFinish + assemblerItem);
-
+        $("#employees").append(assembly);
 
 
     
